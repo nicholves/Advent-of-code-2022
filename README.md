@@ -1,1 +1,7 @@
-# Advent-of-code-2022
+# Advent-of-Code-2022
+
+I will put here my solutions to Advent of Code 2022's problems here.
+
+I may use multiple languages or only 1, whatever I feel like.
+
+Nicholas Veselski
