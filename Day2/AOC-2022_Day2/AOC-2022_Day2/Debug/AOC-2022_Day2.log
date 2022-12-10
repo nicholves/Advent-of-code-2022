@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Nicholas Veselskiy\Desktop\Advent-of-code-2022\Day2\AOC-2022_Day2\AOC-2022_Day2\main.cpp(30,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Nicholas Veselskiy\Desktop\Advent-of-code-2022\Day2\AOC-2022_Day2\AOC-2022_Day2\main.cpp(51,20): warning C4018: '<': signed/unsigned mismatch
+  AOC-2022_Day2.vcxproj -> C:\Users\Nicholas Veselskiy\Desktop\Advent-of-code-2022\Day2\AOC-2022_Day2\Debug\AOC-2022_Day2.exe
