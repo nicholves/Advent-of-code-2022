@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 #define INPUT 1
 #if INPUT == 0
@@ -16,4 +17,4 @@
 #endif
 
 
-bool RecusivelyCheckPaths(const std::pair<int, int>& current, std::set<std::pair<int, int>>& visited, std::vector<std::set<std::pair<int, int>>>& workingPaths, const std::vector<std::vector<char>>& data, std::set<std::pair<int, int>>& fullyChecked);
+void PushAdj(std::vector<std::pair<int, int>>& adjList, const std::vector<std::vector<char>>& data, std::pair<int, int> current);

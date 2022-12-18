@@ -4,19 +4,20 @@
 #include <utility>
 #include <limits>
 
-// used chatGPT for dijkstras implementation
+#include "Funcs.h"
+
+// used chatGPT for dijkstras implementation (worked really well made 1 mistake though)
 
 using namespace std;
 
 const int INF = numeric_limits<int>::max();
 
-vector<pair<int, int>> adj[1001]; // adjacency list representation of the graph
-int dist[1001]; // distance from the source to each node
-bool visited[1001]; // whether the node has been visited in the search
+int dist[ROWS * COLS]; // distance from the source to each node
+bool visited[ROWS * COLS]; // whether the node has been visited in the search
 
-void dijkstra(int source, int num_nodes) {
+void dijkstra(int source, int num_nodes, vector<pair<int, int>> adj[ROWS * COLS]) {
     // initialize distances and visited array
-    for (int i = 1; i <= num_nodes; i++) {
+    for (int i = 1; i < num_nodes; i++) {
         dist[i] = INF;
         visited[i] = false;
     }
@@ -52,19 +53,9 @@ void dijkstra(int source, int num_nodes) {
     }
 }
 
-int main() {
-    int num_nodes, num_edges, source;
-    cin >> num_nodes >> num_edges >> source;
-
-    // read in the edges and add them to the adjacency list
-    for (int i = 0; i < num_edges; i++) {
-        int u, v, w;
-        cin >> u >> v >> w;
-        adj[u].push_back(make_pair(v, w));
-    }
-
+int DoDijkstra(vector<pair<int, int>> adj[ROWS * COLS], int source, int num_nodes) {
     // run Dijkstra's algorithm from the source node
-    dijkstra(source, num_nodes);
+    dijkstra(source, num_nodes, adj);
 
     return 0;
 }
